@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorsBackgroundsFonts</title>
+    <style>
+        body {
+
+            background-color: #e6e3e3;
+            background-image: url('assets/images/nature.jpg');
+            background-size: cover;
+
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color: blue;
+            background-color: #caf5a9;
+        }
+
+        p {
+            color: yellow;
+            font-size: x-large;
+        }
+
+        #first {
+            color: blueviolet;
+            /* Font family with fallbacks */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            /* Font size in different units */
+            font-size: 16px;
+            /* Pixels */
+            font-size: 1em;
+            /* Relative to parent */
+            font-size: 1rem;
+            /* Relative to root */
+            font-size: 100%;
+            /* Percentage */
+
+            /* Other font properties */
+            font-weight: bold;
+            font-style: italic;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+            text-decoration: underline;
+        }
+
+        /* Complete card component */
+        .card {
+            /* Background */
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border: 1px solid #e9ecef;
+            border-radius: 50px;
+
+            /* Typography */
+            font-family: 'Open Sans', sans-serif;
+            color: #2c3e50;
+            line-height: 2;
+
+            /* Spacing & Layout */
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .card-content {
+            font-size: 1rem;
+            color: #e82121;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Page</h1>
+    <p>This is my rist paragraph.</p>
+    <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut at sapiente perferendis, possimus illum,
+        deleniti
+        aspernatur exercitationem qui repellendus quae vel voluptatibus! Vel maxime quasi fugiat quia? Ad, placeat
+        eligendi!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut at sapiente perferendis, possimus illum, deleniti
+        aspernatur exercitationem qui repellendus quae vel voluptatibus! Vel maxime quasi fugiat quia? Ad, placeat
+        eligendi!</p>
+
+    <div class="card">
+        <h2 class="card-title">Card Title</h2>
+        <p class="card-content">
+            This is an example of a card component. It can be used to display
+            content such as descriptions, summaries, or call-to-action text.
+        </p>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+</head>
+
+<body>
+    <h1>Tables:</h1>
+    <table border="">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Tel</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>35</td>
+                <td>12345</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>29</td>
+                <td>98765</td>
+            </tr>
+            <tr>
+                <td>Kevin</td>
+                <td>15</td>
+                <td>45678</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>Example:</h2>
+    <table border="">
+        <thead>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>$1.50</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$0.75</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h2>Example rowspan:</h2>
+    <table border="">
+        <thead>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td>$1.50</td>
+                <td rowspan="2">10</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$0.75</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Example colspan:</h2>
+    <table border="">
+        <thead>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Apple</td>
+                <td colspan="2">10</td>
+            </tr>
+            <tr>
+                <td>Banana</td>
+                <td>$0.75</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Table With Images:</h2>
+    <table>
+        <tr>
+            <td> <img src="assets/images/Sunset.png" alt="Sunset" width="150">
+                <p>Sunset</p>
+            </td>
+            <td> <img src="assets/images/birds_PNG116.png" alt="Bird" width="150">
+                <p>Bird</p>
+            </td>
+            <td> <img src="assets/images/Sunset.png" alt="Sunset" width="150">
+                <p>Sunset</p>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+</body>
+
+</html>

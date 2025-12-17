@@ -1,0 +1,21 @@
+h1{
+    color: aqua;
+}
+
+span{
+    color: red;
+    font-style: oblique;
+}
+
+#second{
+    color: green;
+    background-color: antiquewhite;
+}
+
+p{
+    color: rgb(244, 26, 189);
+}
+
+.myClass{
+    color: blueviolet;
+}

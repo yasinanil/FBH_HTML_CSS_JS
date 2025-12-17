@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormInput</title>
+</head>
+
+<body>
+    <br><br>
+    <form action="01_MyFirstPage.html" method="post" name="contact-form">
+        <fieldset>
+            <legend>Personal Info</legend>
+            <input type="text" placeholder="Username"><br>
+            <input type="email" placeholder="Email address" required><br>
+            <input type="password" placeholder="Password"><br>
+            <input type="number" placeholder="Age" min="18" max="25"><br>
+        </fieldset>
+
+        <input type="date" name="birthday"><br>
+        <input type="color" name="favcolor"><br>
+        <input type="range" name="volume" min="0" max="1000"><br>
+        <input type="file"><br>
+        <label for="cb">Subscribe</label>
+        <input type="checkbox" name="subscribe" value="yes" id="cb"> <br>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="male" id="male"> <br>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="female" id="female"> <br>
+        <textarea rows="5" cols="50" placeholder="Enter your message" maxlength="100"></textarea><br>
+
+        <label for="select">Courses</label>
+        <select id="select">
+            <option>English</option>
+            <option selected>Computer</option>
+            <option>Math</option>
+            <option>PE</option>
+            <option>Science</option>
+        </select><br><br>
+
+
+        <fieldset>
+            <legend>Buttons</legend>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
