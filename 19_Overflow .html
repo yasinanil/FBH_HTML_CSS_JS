@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+
+    <style>
+        #visable {
+            width: 50px;
+            height: 50px;
+            border: 2px solid red;
+        }
+
+        #scroll {
+            width: 150px;
+            height: 150px;
+            border: 2px solid red;
+            margin-top: 100px;
+            overflow: scroll;
+        }
+
+        #auto {
+            width: 150px;
+            height: 250px;
+            border: 2px solid rgb(245, 21, 208);
+            margin-top: 100px;
+            overflow: auto;
+        }
+
+        #hidden {
+            width: 50px;
+            height: 250px;
+            border: 2px solid rgb(141, 245, 21);
+            margin-top: 100px;
+            overflow-x: hidden;
+        }
+
+        #zIndex {
+            width: 250px;
+            height: 250px;
+            border: 2px solid rgb(44, 250, 215);
+            margin-top: 100px;
+            overflow-x: hidden;
+            margin-bottom: 300px;
+        }
+
+        #el1 {
+            width: 50px;
+            height: 150px;
+            border: 2px solid rgb(235, 9, 81);
+            margin-top: 30px;
+            position: absolute;
+            background-color: red;
+            z-index: 1;
+            margin-left: 20px;
+        
+        }
+
+        #el2 {
+            width: 50px;
+            height: 150px;
+            border: 2px solid rgb(235, 9, 81);
+            margin-top: 10px;
+            position: absolute;
+            background-color: blue;
+            z-index: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="visable">
+        This text will exceed the container!
+    </div>
+
+    <div id="scroll">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quas quae expedita accusamus facilis,
+        reiciendis blanditiis non labore hic quod, officiis tempore ipsam fuga. Dolorum impedit at libero placeat ipsum?
+    </div>
+
+    <div id="auto">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quas quae expedita accusamus facilis,
+        reiciendis blanditiis non labore hic quod, officiis tempore ipsam fuga. Dolorum impedit at libero placeat ipsum?
+    </div>
+
+    <div id="hidden">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quas quae expedita accusamus facilis,
+        reiciendis blanditiis non labore hic quod, officiis tempore ipsam fuga. Dolorum impedit at libero placeat ipsum?
+    </div>
+
+    <div id="zIndex">
+
+        <div id="el1" class="nested"></div>
+
+        <div id="el2" class="nested">
+
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
