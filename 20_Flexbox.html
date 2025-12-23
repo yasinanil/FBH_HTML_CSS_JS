@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .item {
+            background: purple;
+            color: white;
+            padding: 20px;
+            order: 2;
+        }
+
+        .special {
+            background: #3498db;
+            flex: 2;
+            order: 1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 20px;
+            background: #959596;
+            padding: 35px;
+            margin: 10px;
+        }
+
+        .nav-item {
+            color: white;
+            padding: 10px 20px;
+            background: #3498db;
+            border-radius: 14px;
+            text-decoration: none;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+
+        .card-regular {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .card-large {
+            flex: 2;
+            align-self: center;
+            /* Override vertical alignment */
+        }
+
+        .row-example {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Wrapping example */
+        .wrap-example {
+            display: flex;
+            flex-wrap: wrap;
+            width: 300px;
+        }
+
+        .item {
+            background: orange;
+            margin: 5px;
+            padding: 20px;
+            width: 100px;
+        }
+
+        .hero-button {
+            background: rgb(25, 221, 22);
+            color: #667eea;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* Center vertically */
+            align-items: center;
+            /* Center horizontally */
+            height: 400px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .hero h1 {
+            margin: 10px 0;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 10px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="#" class="nav-item">Home</a>
+        <a href="#" class="nav-item">About</a>
+        <a href="#" class="nav-item">Services</a>
+        <a href="#" class="nav-item">Contact</a>
+    </nav>
+
+
+    <div class="container">
+        <div class="item">Normal (flex: 1)</div>
+        <div class="item special">Special Item</div>
+        <div class="item">Normal (flex: 1)</div>
+    </div>
+
+    <div class="card-container">
+        <div class="card card-regular">Regular Card</div>
+        <div class="card card-large">Large Card (2x width)</div>
+        <div class="card card-regular">Regular Card</div>
+        <div class="card card-regular">Regular Card</div>
+    </div>
+
+    <div class="row-example">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="wrap-example">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+    </div>
+
+
+    <section class="hero">
+        <h1>Welcome to Our Site</h1>
+        <p>Discover amazing features and services tailored just for you</p>
+        <button class="hero-button">Get Started</button>
+    </section>
+
+
+
+    <p style="margin: 200px;"></p>
+</body>
+
+</html>
