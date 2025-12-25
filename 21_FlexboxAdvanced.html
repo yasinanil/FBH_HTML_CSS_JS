@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        .container {
+            display: flex;
+            /* Activates flexbox */
+            background: #f0f0f0;
+            /* Light background */
+            padding: 10px;
+            gap: 10px;
+            /* Space between items */
+            flex-direction: row-reverse;
+        }
+
+        .flex-start-container,
+        .center-container,
+        .flex-end-container,
+        .space-between-container,
+        .space-around-container {
+            display: flex;
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .flex-start-container {
+            justify-content: flex-start;
+            /* Default: left aligned */
+        }
+
+        .center-container {
+            justify-content: center;
+            /* Center aligned */
+        }
+
+        .flex-end-container {
+            justify-content: flex-end;
+            /* Right aligned */
+        }
+
+        .space-between-container {
+            justify-content: space-between;
+            /* Equal space between */
+        }
+
+        .space-around-container {
+            justify-content: space-around;
+            /* Equal space around */
+        }
+
+        .flex-start-container div,
+        .center-container div,
+        .flex-end-container div,
+        .space-between-container div,
+        .space-around-container div {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+        }
+
+        .align-container {
+            display: flex;
+            height: 120px;
+            background: #f5f5f5;
+            padding: 15px;
+            gap: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .stretch {
+            align-items: stretch;
+        }
+
+        .top {
+            align-items: flex-start;
+        }
+
+        .center {
+            align-items: center;
+        }
+
+        .bottom {
+            align-items: flex-end;
+        }
+
+        .flex-sizing {
+            display: flex;
+            gap: 10px;
+            background: #8cc3fa;
+            padding: 15px;
+        }
+
+        .grow-2 {
+            flex: 2;
+            /* Takes 2x available space */
+            background: #1abc9c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .grow-1 {
+            flex: 1;
+            /* Takes 1x available space */
+            background: #3498db;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .grow-3 {
+            flex: 3;
+            /* Takes 3x available space */
+            background: #e67e22;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .fixed {
+            flex: 0 0 100px;
+            /* Won't grow/shrink, fixed at 100px */
+            background: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .containerGrid {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Tablet */
+        @media (min-width: 768px) {
+            .containerGrid {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .itemGrid {
+                flex: 0 0 calc(50% - 15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+    </div>
+
+    <div class="flex-start-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <div class="center-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <div class="flex-end-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <div class="space-between-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+    </div>
+
+    <div class="space-around-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+    </div>
+
+    <!--Vertical Example:-->
+    <div class="align-container stretch">
+        <div class="cell">Cell A</div>
+        <div class="cell tall">Cell B<br>Tall</div>
+        <div class="cell">Cell C</div>
+    </div>
+
+    <div class="align-container top">
+        <div class="cell">Cell A</div>
+        <div class="cell">Cell B</div>
+        <div class="cell">Cell C</div>
+    </div>
+
+    <div class="align-container center">
+        <div class="cell">Cell A</div>
+        <div class="cell">Cell B</div>
+        <div class="cell">Cell C</div>
+    </div>
+
+    <div class="align-container bottom">
+        <div class="cell">Cell A</div>
+        <div class="cell">Cell B</div>
+        <div class="cell">Cell C</div>
+    </div>
+
+    <div class="flex-sizing">
+        <div class="grow-2">Grow 2</div>
+        <div class="grow-1">Grow 1</div>
+        <div class="grow-1">Grow 1</div>
+        <div class="fixed">Fixed 100px</div>
+        <div class="grow-3">Grow 3</div>
+        <div class="grow-1">Grow 1</div>
+    </div>
+
+    <div class="containerGrid">
+        <div class="itemGrid">Item 1</div>
+        <div class="itemGrid">Item 2</div>
+        <div class="itemGrid">Item 3</div>
+        <div class="itemGrid">Item 4</div>
+        <div class="itemGrid">Item 5</div>
+        <div class="itemGrid">Item 6</div>
+    </div>
+
+
+
+    <p style="margin-bottom: 500px;"></p>
+</body>
+
+</html>
