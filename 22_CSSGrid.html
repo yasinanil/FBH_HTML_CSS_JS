@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        .toy-box {
+            display: grid;
+            grid-template-columns: 1fr 3fr 2fr;
+            gap: 20px;
+        }
+
+        .toy-box div {
+            background: #74b9ff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .chocolate-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 180px);
+            gap: 20px;
+            row-gap: 15px;
+            column-gap: 30px;
+        }
+
+
+        .chocolate-box div {
+            background: #d63031;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 30px;
+            row-gap: 15px;
+            justify-items: center;
+            justify-content: end;
+            align-content: start;
+        }
+
+        .chess-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            background: #2d3436;
+            color: rgb(25, 248, 58);
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .king {
+            grid-column: 2 / 4;
+            /* Starts at line 2, ends at line 4 */
+            background: gold;
+        }
+
+        .queen {
+            grid-row: 2;
+            /* Goes in row 2 */
+            grid-column: span 2;
+            /* Takes up 2 columns */
+            background: rgb(111, 147, 230);
+        }
+
+        .clubhouse {
+            display: grid;
+            grid-template-areas:
+                "roof roof roof"
+                "window . door";
+            /* The dot means empty space! */
+            gap: 10px;
+        }
+
+        .door {
+            grid-area: door;
+            background: #8e44ad;
+        }
+
+        .window {
+            grid-area: window;
+            background: #3498db;
+        }
+
+        .roof {
+            grid-area: roof;
+            background: #e74c3c;
+        }
+
+        .bubble-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .bubble-wrap div {
+            background: #a29bfe;
+            padding: 30px;
+            text-align: center;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="toy-box">
+        <div>Teddy</div>
+        <div>Car</div>
+        <div>Blocks</div>
+    </div>
+
+    <div class="chocolate-box">
+        <div>🍫</div>
+        <div>🍫</div>
+        <div>🍫</div>
+        <div>🍫</div>
+        <div>🍫</div>
+        <div>🍫</div>
+    </div>
+
+    <div class="grid-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+    <div class="chess-board">
+        <div class="king">♔</div>
+        <div class="queen">♕</div>
+        <div>♘</div>
+        <div>♘</div>
+    </div>
+
+    <div class="clubhouse">
+        <div class="door">🚪 Door</div>
+        <div class="window">🪟 Window</div>
+        <div class="roof">🏠 Roof</div>
+    </div>
+
+    <div class="bubble-wrap">
+        <div>POP!</div>
+        <div>POP!</div>
+        <div>POP!</div>
+        <div>POP!</div>
+        <div>POP!</div>
+        <div>POP!</div>
+    </div>
+
+    <p style="margin-bottom: 400px;"></p>
+</body>
+
+</html>
