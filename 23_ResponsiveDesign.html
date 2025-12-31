@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design</title>
+    <style>
+        .box {
+            width: 50%;
+            background: blue;
+            color: white;
+            padding: 20px;
+            margin: 10px auto;
+        }
+
+        img {
+            max-width: 50%;
+        }
+
+        /* Small devices (tablets, 576px and up) */
+        @media (min-width: 576px) {
+            img {
+                width: 50px;
+            }
+        }
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {
+            img {
+                width: 150px;
+            }
+        }
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {
+            img {
+                width: 550px;
+            }
+        }
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            img {
+                width: 1150px;
+            }
+        }
+
+        h2 {
+            font-size: clamp(5px, 5vw, 48px);
+        }
+
+        /* Responsive typography examples */
+
+        /* 1. Using rem units with html font-size */
+        html {
+            font-size: 16px;
+            /* Base size */
+        }
+
+        @media (min-width: 768px) {
+            html {
+                font-size: 18px;
+                /* Larger on tablets */
+            }
+        }
+
+        @media (min-width: 1200px) {
+            html {
+                font-size: 20px;
+                color: blue;
+                /* Even larger on desktops */
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            /* Scales with html font-size */
+        }
+
+        /* 2. Using viewport units */
+        .responsive-heading {
+            font-size: calc(1.5rem + 1vw);
+            /* Scales with viewport width */
+        }
+
+        /* 3. Using clamp() - modern approach */
+        .fluid-text {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            /* Minimum: 1rem, Preferred: 2.5vw, Maximum: 1.5rem */
+        }
+
+        /* 4. Line height adjustment */
+        p {
+            line-height: 1.5;
+        }
+
+        @media (min-width: 768px) {
+            p {
+                line-height: 1.6;
+                /* Slightly more spacing on larger screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">I grow and shrink!</div>
+    <h1>This looks good on phones!</h1>
+
+    <img src="assets/images/birds_PNG116.png" alt="">
+
+    <h2>Readable Title</h2>
+    <p>Easy to read text on any device.</p>
+
+</body>
+
+</html>
